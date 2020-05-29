@@ -4,7 +4,7 @@
   "description": "CROMO-MOBILE STORE is an online mobile retail ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "author": "Amos Moyo",
   "license": "MIT",
