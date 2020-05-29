@@ -37,7 +37,7 @@ export class AuthService {
   constructor(private http: HttpClient, private toastr: Toastr, private router: Router) { }
 
   register(user) {
-    this.http.post<{success: boolean, message: string}>('http://localhost:8080/users/register', user).subscribe(
+    this.http.post<{success: boolean, message: string}>('users/register', user).subscribe(
       (res) => {
         if (res.success) {
           this.toastr.success(res.message);
@@ -53,7 +53,7 @@ export class AuthService {
 
   login(user) {
     // tslint:disable-next-line: max-line-length
-   return this.http.post<{success: boolean, expiresIn: number, message: string, token: string, user: object}>('http://localhost:8080/users/authenticate', user)
+   return this.http.post<{success: boolean, expiresIn: number, message: string, token: string, user: object}>('users/authenticate', user)
    .subscribe(
       (res) => {
         const token = res.token;
@@ -91,7 +91,7 @@ export class AuthService {
     );
     // tslint:disable-next-line: object-literal-shorthand
     // tslint:disable-next-line: max-line-length
-    return this.http.get<{id, firstname, lastname, username, email}>('http://localhost:8080/users/profile', {headers});
+    return this.http.get<{id, firstname, lastname, username, email}>('users/profile', {headers});
   }
 
   logout() {
