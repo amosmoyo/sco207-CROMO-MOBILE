@@ -1,0 +1,36 @@
+.main {
+  padding-top: 20vh;
+  background-color: #fff;
+}
+
+h2, h3 {
+  color: rgb(0, 119, 255);
+}
+
+#matCard {
+  min-height: 80vh;
+  background-color: rgb(189, 205, 223);
+}
+
+.one {
+  background-color: rgb(0, 119, 255);
+  color: #fff;
+  cursor: pointer;
+  min-width: 255px;
+  text-align: left;
+}
+
+.one:hover {
+  background-color: #fff;
+  color: rgb(0, 119, 255);
+}
+
+#matExpansionPanel {
+  background-color: rgb(126, 180, 241);
+}
+
+#matPanelTitle {
+  font-size: 1rem;
+  color: #fff;
+  font-size: bold;
+}
