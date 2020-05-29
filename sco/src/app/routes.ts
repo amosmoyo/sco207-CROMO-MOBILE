@@ -7,11 +7,10 @@ import { CartItemsComponent } from './components/cart-items/cart-items.component
 import { AboutComponent } from './components/about/about.component';
 
 export const appRoutes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'home/about', component: AboutComponent},
   {path: 'home/products', component: ProductListComponent},
   {path: 'home/cart', component: CartItemsComponent, canActivate: [AuthGurds]},
   {path: 'home/products/:id', component: ProductDetailComponent, canActivate: [AuthGurds]},
-  {path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'user', loadChildren: () => import('./components/users/user/user.module').then((m) => m.UserModule)}
 ];
