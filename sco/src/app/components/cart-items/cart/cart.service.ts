@@ -25,7 +25,7 @@ buyItem(obj) {
       'Cache-Control': 'no-cache',
     }
     );
-    this.http.post('users/payme', obj, {headers}).subscribe(
+    this.http.post('http://localhost:8080/users/payme', obj, {headers}).subscribe(
       (res) => {
         console.log('The response from server is ', res);
         console.log('Payment Done');
@@ -48,7 +48,7 @@ buyItem(obj) {
       'Cache-Control': 'no-cache',
     }
     );
-    return this.http.get<{docs}>('users/getdata', {headers})
+    return this.http.get<{docs}>('http://localhost:8080/users/getdata', {headers})
     .pipe(map(res => {
       return {data: res.docs.map(x => {
           return {

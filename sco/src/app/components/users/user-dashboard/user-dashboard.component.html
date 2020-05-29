@@ -3,7 +3,7 @@
 		<div>
 			<div *ngIf="user">
         <div>
-          <p style="text-align: right;">welcome {{user.username}}</p>
+          <p style="text-align: right;"><button style="background-color: rgb(20, 3, 36); color: #fff;">welcome {{user.username}}</button></p>
           <h3>PROFILE INFORMATION</h3>
         </div>
         <br>
@@ -43,11 +43,11 @@
 				</div>
 				<br><br>
 				<div *ngIf="payDetail">
-					<mat-accordion *ngFor="let pay of payDetail ">
+					<mat-accordion  *ngFor="let pay of payDetail " >
 						<mat-expansion-panel (opened)="panelOpenState = true"
-											 (closed)="panelOpenState = false">
-						  <mat-expansion-panel-header>
-							<mat-panel-title>
+											 (closed)="panelOpenState = false" class="payments">
+						  <mat-expansion-panel-header class="matexpansionpanelheader">
+							<mat-panel-title id="mat-panel-title">
 							  Success Pay
 							</mat-panel-title>
 							<mat-panel-description>
@@ -60,7 +60,7 @@
                 <p>Date: {{pay.date}}</p>
               </div>
 						</mat-expansion-panel>
-					  </mat-accordion>
+            </mat-accordion>
 				</div>
 			</div>
 		</div>

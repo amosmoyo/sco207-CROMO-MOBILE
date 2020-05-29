@@ -28,7 +28,7 @@
   <div class="row">
     <mat-card class="col-md-9" class="summary" >
       <div class="cart-item-child">
-        <button type="button" class="btn btn-outline-secondary" id="btn-three" >Add More</button>
+        <button type="button" class="btn btn-outline-secondary" id="btn-three" [routerLink]="['/home/products']">Add More/ Back</button>
         <button type="button" class="btn btn-outline-secondary" id="btn-two" (click)="clearCart()" >Clear Cart</button>
       </div>
     </mat-card>
