@@ -108,7 +108,7 @@ router.get('/getdata', passport.authenticate('jwt', {session: false}), (req, res
     if(err) throw err;
     console.log(docs);
     res.json({docs:docs});
-  })
+  }).sort({date: 1})
 })
 
 module.exports = router;
