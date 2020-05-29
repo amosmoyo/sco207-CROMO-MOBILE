@@ -670,7 +670,7 @@ var CartServiceT = /** @class */ (function () {
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
         });
-        this.http.post('http://localhost:8080/users/payme', obj, { headers: headers }).subscribe(function (res) {
+        this.http.post('users/payme', obj, { headers: headers }).subscribe(function (res) {
             console.log('The response from server is ', res);
             console.log('Payment Done');
             // tslint:disable-next-line: max-line-length
@@ -687,7 +687,7 @@ var CartServiceT = /** @class */ (function () {
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
         });
-        return this.http.get('http://localhost:8080/users/getdata', { headers: headers })
+        return this.http.get('users/getdata', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
             return { data: res.docs.map(function (x) {
                     return {
@@ -1326,7 +1326,7 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.register = function (user) {
         var _this = this;
-        this.http.post('http://localhost:8080/users/register', user).subscribe(function (res) {
+        this.http.post('users/register', user).subscribe(function (res) {
             if (res.success) {
                 _this.toastr.success(res.message);
                 _this.router.navigate(['/user/login']);
@@ -1341,7 +1341,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.login = function (user) {
         var _this = this;
         // tslint:disable-next-line: max-line-length
-        return this.http.post('http://localhost:8080/users/authenticate', user)
+        return this.http.post('users/authenticate', user)
             .subscribe(function (res) {
             var token = res.token;
             var expiryTime = res.expiresIn;
@@ -1374,7 +1374,7 @@ var AuthService = /** @class */ (function () {
         });
         // tslint:disable-next-line: object-literal-shorthand
         // tslint:disable-next-line: max-line-length
-        return this.http.get('http://localhost:8080/users/profile', { headers: headers });
+        return this.http.get('users/profile', { headers: headers });
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;

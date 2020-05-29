@@ -656,7 +656,7 @@ let CartServiceT = class CartServiceT {
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
         });
-        this.http.post('http://localhost:8080/users/payme', obj, { headers }).subscribe((res) => {
+        this.http.post('users/payme', obj, { headers }).subscribe((res) => {
             console.log('The response from server is ', res);
             console.log('Payment Done');
             // tslint:disable-next-line: max-line-length
@@ -673,7 +673,7 @@ let CartServiceT = class CartServiceT {
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
         });
-        return this.http.get('http://localhost:8080/users/getdata', { headers })
+        return this.http.get('users/getdata', { headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             return { data: res.docs.map(x => {
                     return {
@@ -1288,7 +1288,7 @@ let AuthService = class AuthService {
         return this.user;
     }
     register(user) {
-        this.http.post('http://localhost:8080/users/register', user).subscribe((res) => {
+        this.http.post('users/register', user).subscribe((res) => {
             if (res.success) {
                 this.toastr.success(res.message);
                 this.router.navigate(['/user/login']);
@@ -1302,7 +1302,7 @@ let AuthService = class AuthService {
     }
     login(user) {
         // tslint:disable-next-line: max-line-length
-        return this.http.post('http://localhost:8080/users/authenticate', user)
+        return this.http.post('users/authenticate', user)
             .subscribe((res) => {
             const token = res.token;
             const expiryTime = res.expiresIn;
@@ -1335,7 +1335,7 @@ let AuthService = class AuthService {
         });
         // tslint:disable-next-line: object-literal-shorthand
         // tslint:disable-next-line: max-line-length
-        return this.http.get('http://localhost:8080/users/profile', { headers });
+        return this.http.get('users/profile', { headers });
     }
     logout() {
         this.authToken = null;
