@@ -22,7 +22,7 @@ const app = express();
 const users = require('./routes/user');
 
 // Port Number
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
@@ -51,6 +51,8 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html'));
 })
+
+app.enable('trust proxy');
 
 // Start Server
 app.listen(port, () => {
