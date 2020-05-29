@@ -53,7 +53,7 @@ export class AuthService {
 
   login(user) {
     // tslint:disable-next-line: max-line-length
-   return this.http.post<{success: boolean, expiresIn: number, message: string, token: string, user: object}>('http://localhost:8080/users/authenticate', user)
+   return this.http.post<{success: boolean, expiresIn: number, message: string, token: string, user: object}>('users/authenticate', user)
    .subscribe(
       (res) => {
         const token = res.token;
