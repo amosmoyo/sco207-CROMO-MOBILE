@@ -27,9 +27,6 @@ const port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
 // CORS Middleware
 app.use(cors());
 
-// Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
@@ -47,9 +44,12 @@ app.get('/', (req, res) => {
   res.send('invaild endpoint');
 });
 
+// Set Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // invalid routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/html'));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
 app.enable('trust proxy');
