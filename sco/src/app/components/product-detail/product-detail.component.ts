@@ -53,7 +53,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   pay(amount) {
-    var handler = (<any>window).StripeCheckout.configure({
+    const handler = (window as any).StripeCheckout.configure({
       key: 'pk_test_VkJ8y5HG6QjIHyBR6aBM3fB000bigg8HhF',
       locale: 'auto',
       amount: '999',
@@ -76,16 +76,16 @@ export class ProductDetailComponent implements OnInit {
 
   loadStripe() {
     if (!window.document.getElementById('stripe-script')) {
-      var s = window.document.createElement("script");
-      s.id = "stripe-script";
-      s.type = "text/javascript";
-      s.src = "https://checkout.stripe.com/checkout.js";
+      const s = window.document.createElement('script');
+      s.id = 'stripe-script';
+      s.type = 'text/javascript';
+      s.src = 'https://checkout.stripe.com/checkout.js';
       s.onload = () => {
-        this.handler = (<any>window).StripeCheckout.configure({
+        this.handler = (window as any).StripeCheckout.configure({
           key: 'pk_test_VkJ8y5HG6QjIHyBR6aBM3fB000bigg8HhF',
           locale: 'auto',
           amount: 999,
-          token: function (token: any) {
+          token(token: any) {
             // You can access the token ID with `token.id`.
             // Get the token ID to your server-side code for use.
             this.tokenId = token;

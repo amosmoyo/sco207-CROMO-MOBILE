@@ -27,7 +27,7 @@ export class CartService {
 
   getTotal() {
     if (this.items.length > 0) {
-      let total = this.items.map(x => x.price ).reduce((acc, cur) => (acc + cur), 0);
+      const total = this.items.map(x => x.price ).reduce((acc, cur) => (acc + cur), 0);
       return `${total / 100}`;
     }
   }

@@ -1,30 +1,42 @@
-.main{
+.main {
   width: 100%;
-  margin-top: 0px 10px 0px 10px;
+  margin-top: 0 10px 0 10px;
   text-align: center;
   padding-top: 15vh;
 }
-h1, h2, h3, h3, h4, p{
-  margin-top:5px; margin-bottom: 5px;
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-decoration: underline;
 }
-p{
+
+p {
   text-decoration: none;
 }
 
-.submain{
-  width:80%; margin-left: auto; margin-right: auto;
+.submain {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: rgb(190, 194, 194);
 }
-dt{
-  color: #000000;
+
+dt {
+  color: #000;
   text-decoration: underline;
   margin-bottom: 5px;
-  font-weight:bold;
+  font-weight: bold;
 }
-dl{
+
+dl {
   text-align: center;
 }
-.mid{
-  background-color:#999;
+
+.mid {
+  background-color: #999;
 }

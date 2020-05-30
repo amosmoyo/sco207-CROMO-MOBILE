@@ -3,7 +3,8 @@
   background-color: #fff;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: rgb(0, 119, 255);
 }
 
@@ -12,7 +13,7 @@ h2, h3 {
   background-color: rgb(189, 205, 223);
 }
 
-.payments{
+.payments {
   color: rgb(58, 4, 102);
 }
 
@@ -34,12 +35,11 @@ h2, h3 {
 }
 
 #matPanelTitle {
-  font-size: 1rem;
   color: #fff;
-  font-size: bold;
+  font-weight: bold;
 }
 
-#mat-panel-title{
+#mat-panel-title {
   color: rgb(39, 9, 63);
 }
 

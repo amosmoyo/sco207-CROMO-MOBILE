@@ -9,7 +9,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   styleUrls: ['./app.component.css'],
   providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}]
 })
-export class AppComponent  implements OnInit{
+export class AppComponent  implements OnInit {
   title = 'sco';
   isRoot: boolean;
 

@@ -28,7 +28,7 @@ em {
 .sub-main {
   border-radius: 10px;
   border: 0.5px solid  rgb(74, 146, 212);
-  background-color:  rgb(74, 146, 212);
+  background-color: rgb(74, 146, 212);
 }
 
 form {
@@ -36,12 +36,12 @@ form {
 }
 
 #btn-one {
-  color:  rgb(74, 146, 212);
+  color: rgb(74, 146, 212);
   background-color: #fff;
   margin-right: 10px;
 }
 
 #btn-two {
-  color:  rgb(74, 146, 212);
+  color: rgb(74, 146, 212);
   background-color: #fff;
 }
