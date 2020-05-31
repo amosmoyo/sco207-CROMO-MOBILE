@@ -21,7 +21,7 @@ router.post('/register', (req, res, next) => {
     if(err) {
       res.json({success: false, message: 'Failed to  user to the database, seems  user  exist'});
     } else {
-      res.json({success: true, message: 'You have been registered to the database, you can now login'});
+      res.json({success: true, message: '_________________________________________________________________________________________________________________________________________________________________________________________________________________You have been registered to the database, you can now login'});
     }
   });
 });

@@ -87,7 +87,7 @@
 					>
 					<div *ngIf="useremail.invalid && (useremail.touched || useremail.dirty || mouseOver)">
 						<em *ngIf="useremail.errors.required">email is required.</em>
-						<em *ngIf="useremail.errors.pattern">username must  with a letter.</em>
+						<em *ngIf="useremail.errors.email">enter a valid email.</em>
 					</div>
 				</div>
 
