@@ -72,7 +72,9 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+        <div class="form-group"
+             [ngClass] = "{'error': useremail.invalid && (useremail.touched || useremail.dirty || mouseOver)}"
+        >
 					<label for='email'>Email *</label>
 					<input
 						type="text"
