@@ -482,8 +482,6 @@ var CartItemsComponent = /** @class */ (function () {
                 _this.tokenId = obj;
                 _this.total = amount;
                 _this.amos();
-                console.log('moyo', obj);
-                alert('Token Created!!');
             }
         });
         handler.open({
@@ -509,8 +507,6 @@ var CartItemsComponent = /** @class */ (function () {
                         // Get the token ID to your server-side code for use.
                         this.tokenId = token;
                         this.amos();
-                        console.log('amosmoyomonica', token);
-                        alert('Payment Success!!');
                     }
                 });
             };
@@ -659,8 +655,6 @@ var CartServiceT = /** @class */ (function () {
             'Cache-Control': 'no-cache',
         });
         this.http.post('users/payme', obj, { headers: headers }).subscribe(function (res) {
-            console.log('The response from server is ', res);
-            console.log('Payment Done');
             // tslint:disable-next-line: max-line-length
             _this.toastr.success("_______________________________________________________________________________________________________________ PAYMENT DONE .................................................................................................................");
             _this.router.navigate(['/user/dashboard']);
@@ -1125,7 +1119,6 @@ var ProductListComponent = /** @class */ (function () {
             next: function (products) {
                 _this.products = products;
                 _this.filteredArr = _this.products;
-                console.log(_this.products);
             }
         });
     };

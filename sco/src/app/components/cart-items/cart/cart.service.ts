@@ -27,8 +27,6 @@ buyItem(obj) {
     );
     this.http.post('users/payme', obj, {headers}).subscribe(
       (res) => {
-        console.log('The response from server is ', res);
-        console.log('Payment Done');
         // tslint:disable-next-line: max-line-length
         this.toastr.success(`_______________________________________________________________________________________________________________ PAYMENT DONE .................................................................................................................`);
 

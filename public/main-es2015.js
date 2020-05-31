@@ -472,8 +472,6 @@ let CartItemsComponent = class CartItemsComponent {
                 this.tokenId = obj;
                 this.total = amount;
                 this.amos();
-                console.log('moyo', obj);
-                alert('Token Created!!');
             }
         });
         handler.open({
@@ -498,8 +496,6 @@ let CartItemsComponent = class CartItemsComponent {
                         // Get the token ID to your server-side code for use.
                         this.tokenId = token;
                         this.amos();
-                        console.log('amosmoyomonica', token);
-                        alert('Payment Success!!');
                     }
                 });
             };
@@ -645,8 +641,6 @@ let CartServiceT = class CartServiceT {
             'Cache-Control': 'no-cache',
         });
         this.http.post('users/payme', obj, { headers }).subscribe((res) => {
-            console.log('The response from server is ', res);
-            console.log('Payment Done');
             // tslint:disable-next-line: max-line-length
             this.toastr.success(`_______________________________________________________________________________________________________________ PAYMENT DONE .................................................................................................................`);
             this.router.navigate(['/user/dashboard']);
@@ -1093,7 +1087,6 @@ let ProductListComponent = class ProductListComponent {
             next: products => {
                 this.products = products;
                 this.filteredArr = this.products;
-                console.log(this.products);
             }
         });
     }

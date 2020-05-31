@@ -1,6 +1,5 @@
 import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 import { CartService } from './cart-service';
-import { ThrowStmt } from '@angular/compiler';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ProductServiceService } from 'src/app/services/product-service.service';
@@ -66,8 +65,6 @@ export class CartItemsComponent implements OnInit, OnChanges, OnDestroy {
         this.tokenId = obj;
         this.total = amount;
         this.amos();
-        console.log('moyo', obj);
-        alert('Token Created!!');
       }
     });
     handler.open({
@@ -95,8 +92,6 @@ export class CartItemsComponent implements OnInit, OnChanges, OnDestroy {
             // Get the token ID to your server-side code for use.
             this.tokenId = token;
             this.amos();
-            console.log('amosmoyomonica', token);
-            alert('Payment Success!!');
           }
         });
       };

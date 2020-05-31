@@ -30,7 +30,6 @@ export class ProductListComponent implements OnInit {
       next: products => {
         this.products = products;
         this.filteredArr = this.products;
-        console.log(this.products);
       }
     });
   }
