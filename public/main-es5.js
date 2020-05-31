@@ -647,7 +647,6 @@ var CartServiceT = /** @class */ (function () {
     }
     CartServiceT.prototype.buyItem = function (obj) {
         var _this = this;
-        console.log('data', obj);
         this.authToken = localStorage.getItem('id_token');
         // tslint:disable-next-line: prefer-const
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ Authorization: this.authToken,
@@ -994,7 +993,6 @@ var ProductDetailComponent = /** @class */ (function () {
             amount: this.total,
             date: Date.now()
         };
-        console.log(payload);
         this.payment.buyItem(payload);
         return;
     };

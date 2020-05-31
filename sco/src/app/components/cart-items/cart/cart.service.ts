@@ -16,7 +16,6 @@ export class CartServiceT {
   ) { }
 
 buyItem(obj) {
-    console.log('data', obj);
     this.authToken = localStorage.getItem('id_token');
     // tslint:disable-next-line: prefer-const
     let headers = new HttpHeaders(

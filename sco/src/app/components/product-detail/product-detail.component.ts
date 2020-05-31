@@ -47,7 +47,6 @@ export class ProductDetailComponent implements OnInit {
       amount: this.total,
       date: Date.now()
     };
-    console.log(payload);
     this.payment.buyItem(payload);
     return;
   }

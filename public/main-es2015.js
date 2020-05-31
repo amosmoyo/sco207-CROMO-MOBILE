@@ -633,7 +633,6 @@ let CartServiceT = class CartServiceT {
         this.router = router;
     }
     buyItem(obj) {
-        console.log('data', obj);
         this.authToken = localStorage.getItem('id_token');
         // tslint:disable-next-line: prefer-const
         let headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ Authorization: this.authToken,
@@ -970,7 +969,6 @@ let ProductDetailComponent = class ProductDetailComponent {
             amount: this.total,
             date: Date.now()
         };
-        console.log(payload);
         this.payment.buyItem(payload);
         return;
     }
